@@ -1,0 +1,76 @@
+<aside>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <!-- city -->
+    <mat-form-field appearance="fill">
+      <mat-label>choose on city or more</mat-label>
+      <mat-select multiple formControlName="cities">
+        <mat-option *ngFor="let city of cities" [value]="city">
+          {{ city }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!-- program  -->
+    <label for=""> Program </label> 
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      formControlName="program"
+    >
+      <mat-radio-button
+        class="example-radio-button"
+        *ngFor="let program of programs"
+        [value]="program"
+      >
+        {{ program }}
+      </mat-radio-button>
+    </mat-radio-group>
+    <!-- Field  -->
+    <mat-form-field appearance="fill">
+      <mat-label>choose on field or more</mat-label>
+      <mat-select multiple formControlName="fileds">
+        <mat-option *ngFor="let filed of fileds" [value]="filed">{{
+          filed
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>choose on School or more</mat-label>
+      <mat-select multiple formControlName="schools">
+        <mat-option *ngFor="let school of schools" [value]="school">{{
+          school
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- language -->
+    <label for=""> Language </label> 
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      formControlName="language"
+    >
+      <mat-radio-button
+        class="example-radio-button"
+        *ngFor="let language of Languages"
+        [value]="language"
+      >
+        {{ language }}
+      </mat-radio-button>
+    </mat-radio-group>
+    <label for=""> Sort </label>
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      formControlName="sort"
+    >
+      <mat-radio-button
+        class="example-radio-button"
+        *ngFor="let sort of sortType"
+        [value]="sort"
+      >
+        {{ sort }}
+      </mat-radio-button>
+    </mat-radio-group>
+    <button mat-raised-button>Filter</button>
+  </form>
+</aside>

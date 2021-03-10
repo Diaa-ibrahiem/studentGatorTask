@@ -1,0 +1,55 @@
+form {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  mat-form-field {
+    flex-grow: 1;
+    padding: 0 9px;
+    height: 60px;
+  }
+  mat-form-field {
+    &:first-of-type {
+      box-shadow: -8px 3px 17px 3px #4e4e4e29;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      border-right: 1px solid #064281;
+    }
+    &:last-of-type {
+      box-shadow:-8px 3px 17px 3px #4e4e4e29;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+  button {
+    background: #007bff;
+    color: #fff;
+    height: 54px;
+    width: 130px;
+  }
+}
+
+@media (max-width: 425px) {
+  form {
+    flex-direction: column;
+    mat-form-field,
+    button {
+      width: 100%;
+      border-radius: 0;
+    }
+    mat-form-field {
+        &:first-of-type {
+          border-right: 0;
+          border-bottom: 1px solid #064281;
+        }
+        &:last-of-type {
+          box-shadow:none;
+        }
+    }
+    button {
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+}

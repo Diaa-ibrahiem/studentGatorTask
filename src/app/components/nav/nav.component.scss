@@ -1,0 +1,32 @@
+nav {
+  color: rgba(0, 0, 0, 0.6);
+  .collapse ul {
+    li {
+      min-width: 100px;
+    }
+    li a.btn {
+      width: 100px;
+      height: 37px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+  }
+}
+
+@media  (max-width: 425px){
+  .navbar-collapse {
+    background: linear-gradient(45deg, #007bff, transparent);
+    text-align: center;
+    margin-top: 14px;
+    padding-bottom: 10px;
+    a.btn {
+      background: #FFF;
+    color: #007bff !important;
+    display: block;
+    margin: 0 auto;
+    }
+  }
+}

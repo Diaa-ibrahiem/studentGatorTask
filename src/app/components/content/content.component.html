@@ -1,0 +1,14 @@
+<section>
+    <div class="deploma d-flex" *ngFor="let deplo of deploma" >
+            <img [src]="images" class="img-fluid" width="100" height="100" alt="">
+            <div class="deploma-data">
+                <h4 class="sub-title" style="font-size: 17px;">{{deplo.Name}}</h4>
+                <ul class="list-unstyled d-flex">
+                    <li>Fee</li>
+                    <li style="color:#007bff ;">{{deplo.fee}} Per Year</li>
+                    <li style="color:#007bff ;">{{deplo.city}}</li>
+                </ul>
+            </div>
+            <button mat-raised-button>More info</button>
+    </div>
+</section>
